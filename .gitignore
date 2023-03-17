@@ -1,0 +1,9 @@
+# WebStorm generated files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.log
+
+# Node.js dependencies
+node_modules/

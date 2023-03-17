@@ -1,0 +1,25 @@
+:root{
+ --blue :#0D3B66
+}
+
+body{
+    background-color: #FAF0CA;
+}
+
+#navegacion{
+    background-color: #EE964B;
+}
+
+h1{
+    font-size: 36px;
+    color: var(--blue);
+    padding: 2px;
+    text-shadow: 2px 2px 0px var(--blue);
+}
+
+p{
+    font-size: 16px;
+    color: var(--blue);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
