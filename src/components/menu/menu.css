@@ -1,0 +1,33 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4F5D75;
+  font-size: 1.75em;
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #6380bb;
+}
+li.active {
+  background-color: #6380bb;
+}
+
+/*# sourceMappingURL=menu.css.map */

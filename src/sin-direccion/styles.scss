@@ -1,0 +1,43 @@
+$bg: #2D3142;
+$grey: #BFC0C0;
+$blue: #4F5D75;
+$white: #FFFFFF;
+$orange: #EF8354;
+$hover: #6380bb;
+
+body {
+  background-color: $bg;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  color: $white;
+  font-size: 36px;
+  margin-top: 40px;
+}
+p {
+  color: $white;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.button {
+  background-color: $blue;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover;
+  }
+}

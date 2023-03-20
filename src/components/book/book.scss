@@ -1,0 +1,49 @@
+$bg: #2D3142;
+$grey: #BFC0C0;
+$blue: #4F5D75;
+$white: #FFFFFF;
+$orange: #EF8354;
+$hover: #6380bb;
+
+.book {
+  width: 400px;
+  height: fit-content;
+  border: 1px solid $hover;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: block;
+  border-radius: 15px;
+  margin: 15px;
+  text-decoration: none;
+
+  .text-content {
+    height: fit-content;
+    word-wrap: break-word;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: $white;
+
+    #title {
+      margin: 0;
+      text-align: left;
+      font-size: x-large;
+    }
+
+    #author {
+      color: $grey;
+      margin: 0;
+      text-align: left;
+      font-size: large;
+    }
+  }
+
+  a {
+    margin: 0;
+
+    #cover {
+      width: 100%;
+      height: 525px;
+      border-radius: 15px;
+    }
+  }
+}

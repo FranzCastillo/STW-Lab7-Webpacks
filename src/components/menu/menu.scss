@@ -1,0 +1,41 @@
+$bg: #2D3142;
+$grey: #BFC0C0;
+$blue: #4F5D75;
+$white: #FFFFFF;
+$orange: #EF8354;
+$hover: #6380bb;
+
+// Centers the menu and displays its content horizontally
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Menu
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $blue;
+  font-size: 1.75em;
+}
+
+li {
+  float: left;
+  a {
+    display: block;
+    color: $white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    &:hover:not(.active) {
+      background-color: $hover
+    }
+  }
+  &.active {
+    background-color: $hover;
+  }
+}
