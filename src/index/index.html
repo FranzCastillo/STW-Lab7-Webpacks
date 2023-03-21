@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Inicio</title>
-        <script src="../components/menu/menu.js"></script>
-        <link href="../styles/styles.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <menu-bar
-                active="inicio"
-                inicio="index.html"
-                libros-populares="../libros-populares/libros-populares.html"
-                nuevos-lanzamientos="../nuevos-lanzamientos/nuevos-lanzamientos.html"
-        ></menu-bar>
-        <div class="Contenido">
-            <h1>
-                Bienvenido a la mística librería
-            </h1>
-            <h2>
-                Aquí podrás encontrar los mejores libros de la historia.
-            </h2>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <script src="../components/menu/menu.js"></script>
+    <script src="../components/book/book.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<menu-bar
+        active="inicio"
+        inicio="index.html"
+        libros-populares="../libros-populares/libros-populares.html"
+        nuevos-lanzamientos="../nuevos-lanzamientos/nuevos-lanzamientos.html"
+></menu-bar>
+<div class="jumbotron text-center">
+    <h1>Bienvenido a la librería mística</h1>
+    <h5>Aquí podrás encontrar los mejores libros de la historia.</h5>
+</div>
+<div class="container-fluid">
+
+</div>
+</body>
 </html>

@@ -1,9 +1,9 @@
-$bg: #2D3142;
-$grey: #BFC0C0;
-$blue: #4F5D75;
-$white: #FFFFFF;
-$orange: #EF8354;
-$hover: #6380bb;
+$gun_metal: #222831;
+$onyx: #393E46;
+$current: #1D767E;
+$verdigris: #00ADB5;
+$white: #EEEEEE;
+$powder: #F7F7F1;
 
 // Centers the menu and displays its content horizontally
 .menu {
@@ -18,7 +18,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: $blue;
+  background-color: $gun_metal;
   font-size: 1.75em;
 }
 
@@ -31,11 +31,12 @@ li {
     padding: 14px 16px;
     text-decoration: none;
 
-    &:hover:not(.active) {
-      background-color: $hover
+    &.active {
+      background-color: $onyx;
     }
-  }
-  &.active {
-    background-color: $hover;
+
+    &:hover:not(.active) {
+      background-color: $onyx;
+    }
   }
 }

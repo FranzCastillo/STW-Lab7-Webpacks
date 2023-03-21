@@ -1,13 +1,23 @@
 body {
-  background-color: #2D3142;
+  text-decoration: none;
 }
-body h1 {
-  color: #FFFFFF;
-  font-size: 3em;
+body .jumbotron {
+  background-color: #F7F7F1;
+  color: #222831;
+  margin: 0;
+  padding: 15px;
 }
-body h2 {
-  color: #FFFFFF;
-  font-size: 2em;
+body .container-fluid {
+  background-color: #F7F7F1;
+  padding: 0;
+  height: 80vh;
+}
+body .row {
+  background-color: #F7F7F1;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=styles.css.map */

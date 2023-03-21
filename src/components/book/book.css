@@ -1,38 +1,53 @@
 .book {
-  width: 400px;
-  height: fit-content;
-  border: 1px solid #6380bb;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  width: 250px;
+  height: auto;
+  border: 1px solid #222831;
   display: block;
   border-radius: 15px;
-  margin: 15px;
-  text-decoration: none;
-}
-.book .text-content {
-  height: fit-content;
-  word-wrap: break-word;
-  padding: 15px;
-  text-align: left;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-.book .text-content #title {
-  margin: 0;
-  text-align: left;
-  font-size: x-large;
-}
-.book .text-content #author {
-  color: #BFC0C0;
-  margin: 0;
-  text-align: left;
-  font-size: large;
+  padding: 0;
 }
 .book a {
+  text-decoration: none;
+}
+.book a .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  word-wrap: break-word;
+  text-align: left;
+  font-weight: bold;
+}
+.book a .text-content h3 {
+  margin: 5px;
+  height: 3em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book a .text-content h5 {
+  margin: 5px;
+}
+.book a .text-content img {
+  display: block;
   margin: 0;
+  vertical-align: bottom;
+}
+.book a .text-content #title {
+  color: #222831;
+  text-align: left;
+  max-height: 3.6em;
+  overflow: hidden;
+}
+.book a .text-content #author {
+  color: #393E46;
+  text-align: left;
 }
 .book a #cover {
   width: 100%;
-  height: 525px;
+  height: 300px;
   border-radius: 15px;
 }
 

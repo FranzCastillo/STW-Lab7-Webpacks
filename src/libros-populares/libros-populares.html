@@ -5,27 +5,38 @@
     <title>Libros Populares</title>
     <script src="../components/menu/menu.js"></script>
     <script src="../components/book/book.js"></script>
-    <link href="../styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+    <!--    Links bootstrap reference of the npm install-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <menu-bar
-            active="libros-populares"
-            inicio="../index/index.html"
-            libros-populares="libros-populares.html"
-            nuevos-lanzamientos="../nuevos-lanzamientos/nuevos-lanzamientos.html"
-    ></menu-bar>
+<menu-bar
+        active="libros-populares"
+        inicio="../index/index.html"
+        libros-populares="libros-populares.html"
+        nuevos-lanzamientos="../nuevos-lanzamientos/nuevos-lanzamientos.html"
+></menu-bar>
+<div class="jumbotron text-center">
     <h1>Libros Populares</h1>
-    <book-display
-            title="La Luz en la Oscuridad"
-            author="Heino Falcke"
-            cover="https://tienda.sophosenlinea.com/imagenes/9786073/978607380123.GIF"
-            link="../sin-direccion/sin-direccion.html"
-    ></book-display>
-    <book-display
-            title="Astrofísica para gente con prisa"
-            author="Neil DeGrasse Tyson"
-            cover="https://tienda.sophosenlinea.com/imagenes/9786077/978607747435.GIF"
-            link="../sin-direccion/sin-direccion.html"
-    ></book-display>
+    <h5>Los libros más vendidos de este mes.</h5>
+</div>
+<div class="row">
+    <div class="col-sm-auto">
+        <book-display
+                author="Heino Falcke"
+                cover="https://tienda.sophosenlinea.com/imagenes/9786073/978607380123.GIF"
+                link="../sin-direccion/sin-direccion.html"
+                title="La Luz en la Oscuridad"
+        ></book-display>
+    </div>
+    <div class="col-sm-auto">
+        <book-display
+                author="Neil DeGrasse Tyson"
+                cover="https://tienda.sophosenlinea.com/imagenes/9786077/978607747435.GIF"
+                link="../sin-direccion/sin-direccion.html"
+                title="Astrofísica para gente con prisa"
+        ></book-display>
+    </div>
+</div>
 </body>
 </html>

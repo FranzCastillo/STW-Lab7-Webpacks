@@ -9,7 +9,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #4F5D75;
+  background-color: #222831;
   font-size: 1.75em;
 }
 
@@ -18,16 +18,16 @@ li {
 }
 li a {
   display: block;
-  color: #FFFFFF;
+  color: #EEEEEE;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-li a:hover:not(.active) {
-  background-color: #6380bb;
+li a.active {
+  background-color: #393E46;
 }
-li.active {
-  background-color: #6380bb;
+li a:hover:not(.active) {
+  background-color: #393E46;
 }
 
 /*# sourceMappingURL=menu.css.map */

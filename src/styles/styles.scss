@@ -1,18 +1,30 @@
-$bg: #2D3142;
-$grey: #BFC0C0;
-$blue: #4F5D75;
-$white: #FFFFFF;
-$orange: #EF8354;
+$gun_metal: #222831;
+$onyx: #393E46;
+$current: #1D767E;
+$verdigris: #00ADB5;
+$white: #EEEEEE;
+$powder: #F7F7F1;
 
 body {
-  background-color: $bg;
-
-  h1 {
-    color: $white;
-    font-size: 3em;
+  text-decoration: none;
+  .jumbotron{
+    background-color: $powder;
+    color: $gun_metal;
+    margin: 0;
+    padding: 15px;
   }
-  h2 {
-    color: $white;
-    font-size: 2em;
+
+  .container-fluid{
+    background-color: $powder;
+    padding: 0;
+    height: 80vh;
+  }
+
+  .row {
+    background-color: $powder;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    flex-wrap: wrap;
   }
 }

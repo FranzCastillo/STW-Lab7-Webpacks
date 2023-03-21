@@ -1,48 +1,60 @@
-$bg: #2D3142;
-$grey: #BFC0C0;
-$blue: #4F5D75;
-$white: #FFFFFF;
-$orange: #EF8354;
-$hover: #6380bb;
+$gun_metal: #222831;
+$onyx: #393E46;
+$current: #1D767E;
+$verdigris: #00ADB5;
+$white: #EEEEEE;
+$powder: #F7F7F1;
 
 .book {
-  width: 400px;
-  height: fit-content;
-  border: 1px solid $hover;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 250px;
+  height: auto;
+  border: 1px solid $gun_metal;
   display: block;
   border-radius: 15px;
-  margin: 15px;
-  text-decoration: none;
-
-  .text-content {
-    height: fit-content;
-    word-wrap: break-word;
-    padding: 15px;
-    text-align: left;
-    font-weight: bold;
-    color: $white;
-
-    #title {
-      margin: 0;
-      text-align: left;
-      font-size: x-large;
-    }
-
-    #author {
-      color: $grey;
-      margin: 0;
-      text-align: left;
-      font-size: large;
-    }
-  }
-
+  padding: 0;
   a {
-    margin: 0;
+    text-decoration: none;
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      word-wrap: break-word;
+      text-align: left;
+      font-weight: bold;
 
+      h3{
+        margin: 5px;
+        height: 3em;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      h5{
+        margin: 5px;
+      }
+      img{
+        display: block;
+        margin: 0;
+        vertical-align: bottom;
+      }
+      #title {
+        color: $gun_metal;
+        text-align: left;
+        max-height: 3.6em;
+        overflow: hidden;
+      }
+      #author {
+        color: $onyx;
+        text-align: left;
+      }
+    }
     #cover {
       width: 100%;
-      height: 525px;
+      height: 300px;
       border-radius: 15px;
     }
   }

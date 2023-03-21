@@ -6,6 +6,8 @@
     <script src="../components/menu/menu.js"></script>
     <script src="../components/book/book.js"></script>
     <link href="../styles/styles.css" type="text/css" rel="stylesheet">
+    <!--    Links bootstrap reference of the npm install-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <menu-bar
@@ -14,18 +16,27 @@
         libros-populares="../libros-populares/libros-populares.html"
         nuevos-lanzamientos="nuevos-lanzamientos.html"
 ></menu-bar>
-<h1>Libros Populares</h1>
-<book-display
-        title="Harry Potter: Las Reliquias de la Muerte"
-        author="J. K. Rowling"
-        cover="https://tienda.sophosenlinea.com/imagenes/9788418/978841817313.GIF"
-        link="../sin-direccion/sin-direccion.html"
-></book-display>
-<book-display
-        title="¿Dónde estoy?"
-        author="Francisco Castillo"
-        cover="../assets/portadas/Portada_historia.png"
-        link="../historia/inicio.html"
-></book-display>
+<div class="jumbotron text-center">
+    <h1>Nuevos lanzamientos</h1>
+    <h5>Libros que han salido recientemente.</h5>
+</div>
+<div class="row">
+    <div class="col-sm-auto">
+        <book-display
+                title="Harry Potter: Las Reliquias de la Muerte"
+                author="J. K. Rowling"
+                cover="https://tienda.sophosenlinea.com/imagenes/9788418/978841817313.GIF"
+                link="../sin-direccion/sin-direccion.html"
+        ></book-display>
+    </div>
+    <div class="col-sm-auto">
+        <book-display
+                title="¿Dónde estoy?"
+                author="Francisco Castillo"
+                cover="../assets/portadas/Portada_historia.png"
+                link="../historia/inicio.html"
+        ></book-display>
+    </div>
+</div>
 </body>
 </html>
