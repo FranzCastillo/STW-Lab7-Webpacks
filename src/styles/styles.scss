@@ -8,24 +8,23 @@ $powder: #F7F7F1;
 body {
   text-decoration: none;
 
-  .jumbotron {
+  .content {
     background-color: $powder;
     color: $gun_metal;
     margin: 0;
     padding: 15px;
-  }
-
-  .container-fluid {
-    background-color: $powder;
-    padding: 0;
-    height: 80vh;
-  }
-
-  .row {
-    background-color: $powder;
     display: flex;
     justify-content: center;
-    height: 95vh;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 90vh;
+    flex-wrap: nowrap;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  h5 {
+    animation-delay: 1.5s;
   }
 }
