@@ -1,0 +1,64 @@
+#salir {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #393E46;
+}
+#salir #texto {
+  text-decoration: none;
+  color: #F7F7F1;
+}
+
+#container {
+  background-color: #F7F7F1;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+#container .jumbotron {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#container #content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 25px 25px 25px;
+}
+#container .img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#container .caption {
+  display: flex;
+  justify-content: center;
+}
+#container a {
+  text-decoration: none;
+}
+#container .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+#container .row #question {
+  word-break: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: -5%;
+}
+
+/*# sourceMappingURL=story.css.map */

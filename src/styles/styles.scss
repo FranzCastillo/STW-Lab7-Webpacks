@@ -7,14 +7,15 @@ $powder: #F7F7F1;
 
 body {
   text-decoration: none;
-  .jumbotron{
+
+  .jumbotron {
     background-color: $powder;
     color: $gun_metal;
     margin: 0;
     padding: 15px;
   }
 
-  .container-fluid{
+  .container-fluid {
     background-color: $powder;
     padding: 0;
     height: 80vh;

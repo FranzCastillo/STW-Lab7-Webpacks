@@ -1,0 +1,81 @@
+$gun_metal: #222831;
+$onyx: #393E46;
+$current: #1D767E;
+$verdigris: #00ADB5;
+$white: #EEEEEE;
+$powder: #F7F7F1;
+
+#salir {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $onyx;
+
+  #texto {
+    text-decoration: none;
+    color: $powder;
+  }
+}
+
+#container {
+  background-color: $powder;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+  .jumbotron {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 25px 25px 25px;
+
+  }
+
+  .img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .caption {
+    display: flex;
+    justify-content: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  //  places two col-sm-6 bootstrap columns side by side
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+
+    #question {
+      //  Breaks words and aligns them in the center vertically and horizontally
+      word-break: break-word;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      top: -5%;
+    }
+  }
+}
