@@ -20,7 +20,7 @@ export class Book extends HTMLElement {
             title: "Default Title",
             author: "Default Author",
             link: "#",
-            image: "../assets/portadas/placeholder.jpg",
+            image: "../../../assets/placeholder.jpg",
         }
         // Gets the attributes
         if (this.hasAttribute("title")) {

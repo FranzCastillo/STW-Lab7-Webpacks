@@ -1,0 +1,40 @@
+body {
+  text-decoration: none;
+}
+body .jumbotron {
+  background-color: #F7F7F1;
+  color: #222831;
+  margin: 0;
+  padding: 15px;
+}
+body .container-fluid {
+  background-color: #F7F7F1;
+  padding: 0;
+  height: 80vh;
+}
+body .row {
+  background-color: #F7F7F1;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  flex-wrap: wrap;
+}
+body .content {
+  background-color: #F7F7F1;
+  color: #222831;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-wrap: nowrap;
+}
+body .text {
+  text-align: center;
+}
+body h5 {
+  animation-delay: 1.5s;
+}
+
+/*# sourceMappingURL=pages.css.map */

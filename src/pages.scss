@@ -4,9 +4,29 @@ $current: #1D767E;
 $verdigris: #00ADB5;
 $white: #EEEEEE;
 $powder: #F7F7F1;
-
 body {
   text-decoration: none;
+
+  .jumbotron {
+    background-color: $powder;
+    color: $gun_metal;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .container-fluid {
+    background-color: $powder;
+    padding: 0;
+    height: 80vh;
+  }
+
+  .row {
+    background-color: $powder;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    flex-wrap: wrap;
+  }
 
   .content {
     background-color: $powder;
