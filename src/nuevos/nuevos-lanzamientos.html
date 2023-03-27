@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Nuevos Lanzamientos</title>
-    <script src="components/components.js" type="module"></script>
-    <link href="pages.css" rel="stylesheet" type="text/css">
-    <!--    Links bootstrap reference of the npm install-->
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <menu-bar
         active="nuevos-lanzamientos"
-        inicio="../index/index.html"
-        libros-populares="../libros-populares/libros-populares.html"
-        nuevos-lanzamientos="nuevos-lanzamientos.html"
+        inicio="./index.html"
+        libros-populares="./libros-populares.html"
+        nuevos-lanzamientos="./nuevos-lanzamientos.html"
 ></menu-bar>
 <div class="jumbotron text-center">
     <h1>Nuevos lanzamientos</h1>
@@ -24,15 +20,15 @@
         <book-display
                 author="J. K. Rowling"
                 cover="https://tienda.sophosenlinea.com/imagenes/9788418/978841817313.GIF"
-                link="../sin-direccion/sin-direccion.html"
+                link="./sin-direccion.html"
                 title="Harry Potter: Las Reliquias de la Muerte"
         ></book-display>
     </div>
     <div class="col-sm-auto">
         <book-display
                 author="Francisco Castillo"
-                cover="../../assets/Portada_historia.png"
-                link="../historia/inicio.html"
+                cover="./Portada_historia.png"
+                link="./inicio.html"
                 title="¿Dónde estoy?"
         ></book-display>
     </div>

@@ -1,7 +1,7 @@
-const { merge } = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
 const path = require("path");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     optimization: {
@@ -18,7 +18,17 @@ module.exports = merge(common, {
             new OptimizeCssAssetsPlugin(),
             new TerserPlugin(),
             new HtmlWebpackPlugin({
-                template: "./src/index_template.html",
+                filename: 'index.html',
+                template: "./src/index/index.html",
+                minify: {
+                    removeAttributeQuotes: true,
+                    collapseWhitespace: true,
+                    removeComments: true,
+                }
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'libros-populares.html',
+                template: "./src/populares/libros-populares.html",
                 minify: {
                     removeAttributeQuotes: true,
                     collapseWhitespace: true,
@@ -30,12 +40,8 @@ module.exports = merge(common, {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
+            filename: '[name].bundle.css',
         }),
-    ],
-    plugins: [
-        new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
-        new CleanWebpackPlugin(),
     ],
     module: {
         rules: [

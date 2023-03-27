@@ -1,3 +1,4 @@
+const template = `
 <div class="book">
     <a id="link">
         <div class="text-content">
@@ -7,3 +8,6 @@
         <img alt="Portada Libro" id="cover">
     </a>
 </div>
+`;
+
+export default template;

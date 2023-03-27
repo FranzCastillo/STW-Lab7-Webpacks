@@ -1,3 +1,4 @@
+const template = `
 <div class="container" id="container">
     <div class="jumbotron text-center">
         <h1 id="title"></h1>
@@ -38,3 +39,6 @@
         </a>
     </div>
 </div>
+`;
+
+export default template;
