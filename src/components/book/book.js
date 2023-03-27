@@ -10,10 +10,10 @@ export class Book extends HTMLElement {
         const {shadowRoot, shadowDOM} = this;
 
         // Import HTML
-        let htmlPath = "../components/book/book.html";
+        let htmlPath = "../src/components/book/book.html";
         this.shadowRoot.innerHTML = await get_html(htmlPath);
         // Import CSS
-        let cssPath = "../components/book/book.css";
+        let cssPath = "../src/components/book/book.css";
         this.shadowRoot.appendChild(get_css_component(cssPath));
         // Sets default values
         let bookValues = {

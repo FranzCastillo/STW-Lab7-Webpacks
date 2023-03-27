@@ -1,6 +1,6 @@
 import {get_html, get_css_component} from "../component_creator.js";
 
-export class Menu_bar extends HTMLElement {
+export class Menu extends HTMLElement {
     constructor() {
         super();
         const shadowDOM = this.attachShadow({mode: "open"});
@@ -10,10 +10,10 @@ export class Menu_bar extends HTMLElement {
         const {shadowRoot, shadowDOM} = this;
 
         // Import HTML
-        let htmlPath = "../components/menu/menu.html";
+        let htmlPath = "../src/components/menu/menu.html";
         this.shadowRoot.innerHTML = await get_html(htmlPath);
         // Import CSS
-        let cssPath = "../components/menu/menu.css";
+        let cssPath = "../src/components/menu/menu.css";
         this.shadowRoot.appendChild(get_css_component(cssPath));
         // Check if attributes are set
         if (this.hasAttribute("active")) {
