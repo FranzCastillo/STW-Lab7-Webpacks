@@ -1,6 +1,6 @@
-import '../../styles/bootstrap_imports.js';
 import './story.scss';
-import template from "./template";
+import "../../styles/all_styles.js";
+import template from "./template.js";
 export default function render_story(){
     class Story extends HTMLElement {
         constructor() {
@@ -13,6 +13,11 @@ export default function render_story(){
 
             // Import HTML
             this.shadowRoot.innerHTML = template;
+
+            const link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("href", "story.bundle.css");
+            this.shadowRoot.appendChild(link);
             // Set story values
             const title = this.getAttribute("title");
             const titleElement = shadowRoot.getElementById("title");

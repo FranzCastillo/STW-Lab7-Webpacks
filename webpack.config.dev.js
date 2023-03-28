@@ -5,15 +5,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-
 module.exports = merge(common, {
     mode: 'development',
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     plugins: [
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].bundle.css',
         }),
@@ -21,7 +15,7 @@ module.exports = merge(common, {
             filename: 'index.html', // The name that the exported file will have
             template: './src/index/index.html',
             // common → entries
-            chunks: ['index', 'menu'],
+            chunks: ['menu', 'index'],
         }),
         new HtmlWebpackPlugin({
             filename: 'libros-populares.html',
@@ -31,7 +25,7 @@ module.exports = merge(common, {
         new HtmlWebpackPlugin({
             filename: 'nuevos-lanzamientos.html',
             template: './src/nuevos/nuevos-lanzamientos.html',
-            chunks: ['populares', 'menu', 'book'],
+            chunks: ['nuevos', 'menu', 'book'],
         }),
         new HtmlWebpackPlugin({
             filename: 'sin-direccion.html',
@@ -51,17 +45,5 @@ module.exports = merge(common, {
             template: './src/historia/inicio/inicio.html',
             chunks: ['inicio', 'story']
         })
-
     ],
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader'],
-            }
-        ],
-    }
 });

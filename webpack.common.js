@@ -1,3 +1,5 @@
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry: {
         index: './src/index/index.js',
@@ -10,7 +12,10 @@ module.exports = {
         book: './src/components/book/book.js',
         menu: './src/components/menu/menu.js',
         story: './src/components/story/story.js',
-
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
@@ -23,12 +28,19 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'],
+            },
+            {
                 test: /\.(svg|png|jpg|gif)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: "[name].[hash].[ext]",
-                        outputPath: "imgs",
+                        name: "[name].[ext]",
+                        outputPath: "imgs/",
                     }
                 }
             }
