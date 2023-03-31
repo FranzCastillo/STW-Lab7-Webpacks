@@ -10,7 +10,7 @@ module.exports = merge(common, {
     mode: 'production',
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist_sin_babel'),
+        path: path.resolve(__dirname, 'dist_con_babel'),
     },
     optimization: {
         minimizer: [

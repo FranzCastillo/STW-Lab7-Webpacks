@@ -13,10 +13,6 @@ module.exports = {
         menu: './src/components/menu/menu.js',
         story: './src/components/story/story.js',
     },
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     module: {
         rules: [
             {
