@@ -6,8 +6,51 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = merge(common, {
+module.exports = {
     mode: 'production',
+    entry: {
+        index: './src/index/index.js',
+        sin_direccion: './src/sin-direccion/sin_direccion.js',
+        populares: './src/populares/populares.js',
+        nuevos: './src/nuevos/nuevos.js',
+        bus: './src/historia/bus/bus.js',
+        car: './src/historia/car/car.js',
+        inicio: './src/historia/inicio/inicio.js',
+        book: './src/components/book/book.js',
+        menu: './src/components/menu/menu.js',
+        story: './src/components/story/story.js',
+        polyfill: '@babel/polyfill',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-proposal-class-properties'],
+                    }
+                }
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader'],
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'],
+            },
+        ],
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist_con_babel'),
@@ -69,7 +112,8 @@ module.exports = merge(common, {
                     collapseWhitespace: true,
                     removeComments: true,
                 }
-            }),new HtmlWebpackPlugin({
+            }),
+            new HtmlWebpackPlugin({
                 filename: 'car.html',
                 template: './src/historia/car/car.html',
                 chunks: ['car', 'story'],
@@ -78,7 +122,8 @@ module.exports = merge(common, {
                     collapseWhitespace: true,
                     removeComments: true,
                 }
-            }),new HtmlWebpackPlugin({
+            }),
+            new HtmlWebpackPlugin({
                 filename: 'inicio.html',
                 template: './src/historia/inicio/inicio.html',
                 chunks: ['inicio', 'story'],
@@ -94,6 +139,6 @@ module.exports = merge(common, {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].bundle.css',
-        }),
+        })
     ],
-});
+};
